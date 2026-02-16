@@ -11,6 +11,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
+import paraguayCircle from '../assets/img/logo/paraguay_flag_circle.webp'
 
 
 
@@ -29,15 +30,15 @@ export default function Example() {
       <nav aria-label="Global" className=" flex w-full items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Lopez Import</span>
             <img
               alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+              src={paraguayCircle}
               className="h-8 w-auto dark:hidden"
             />
             <img
               alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+              src={paraguayCircle}
               className="h-8 w-auto not-dark:hidden"
             />
           </a>
