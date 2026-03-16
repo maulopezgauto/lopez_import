@@ -15,7 +15,7 @@ import paraguayCircle from '../assets/img/logo/paraguay_flag_circle.webp'
 
 
 
-export default function Example() {
+export default function PublicNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -85,6 +85,16 @@ export default function Example() {
               }
             >
             Contact
+          </NavLink>
+          <NavLink to="/login" className={({ isActive }) =>
+                `
+                text-sm font-medium tracking-wide
+                transition-colors duration-300
+                ${isActive ? "text-white relative after:absolute after:left-0 after:-bottom-1 after:w-full after:h-px after:bg-red-600" : "text-gray-300 hover:text-red-600"}
+                `
+              }
+            >
+            Login/Registro
           </NavLink>
         </PopoverGroup>
         

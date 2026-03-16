@@ -1,7 +1,9 @@
 import React from "react";
-import Team from "../components/catalogues/temcards.jsx"
+import Team from "./catalogue/temcards.jsx"
 
-const PilarCard = ({ nombre, posicion, imagen, descripcion, id }) => {
+const PilarCard = ({ nombre, posicion: _posicion, imagen, descripcion, id: _id }) => {
+  // eslint-disable-next-line no-unused-vars
+  const unused = { _posicion, _id };
   return (
     <div className="group text-center">
       <div className="relative h-80 mb-8 overflow-hidden">

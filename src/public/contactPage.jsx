@@ -1,6 +1,6 @@
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
-import paraguayFlag from './assets/img/backgrounds/paraguay-flag-png.png'
-import ContactForm  from './components/contactForm.jsx';
+import paraguayFlag from '../assets/img/backgrounds/paraguay-flag-png.png'
+import ContactForm  from '../components/contact/contactForm.jsx';
 
 function ContactPage() {
   return (

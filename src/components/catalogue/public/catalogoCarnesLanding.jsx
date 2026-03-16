@@ -1,4 +1,4 @@
-import CarnesImages from '../../assets/img/carnes/index.js';
+import CarnesImages from '../../../assets/img/carnes/index.js';
 
 const carnesLanding = [{
 

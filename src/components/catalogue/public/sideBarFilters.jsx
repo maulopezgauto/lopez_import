@@ -7,14 +7,24 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar"
+import { useMemo } from "react"
 
-export default function SidebarFilters({ corte, setCorte }) {
-  const cortes = [
-    { id: "all", label: "Todos" },
-    { id: "res", label: "Res" },
-    { id: "cerdo", label: "Cerdo" },
-    { id: "pollo", label: "Pollo" },
-  ]
+export default function SidebarFilters({ carnes, corte, setCorte }) {
+    // 🔄 Generar filtros dinámicamente basados en los productos
+    const cortes = useMemo(() => {
+      const categorias = [...new Set(carnes?.map(c => c.categoria))]
+      const filtros = [
+        { id: "all", label: "Todos" },
+        ...categorias
+          .filter(cat => cat) // Filtrar valores null/undefined
+          .sort()
+          .map(cat => ({
+            id: cat,
+            label: cat.charAt(0).toUpperCase() + cat.slice(1)
+          }))
+      ]
+      return filtros
+    }, [carnes])
 
   return (
     

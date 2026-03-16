@@ -45,7 +45,6 @@ export default function Pagination({ page, setPage, totalPages }) {
       {/* Next */}
       <button
         onClick={() => {
-            console.log("Click Next")
             setPage(p => Math.min(p + 1, totalPages))
         }}
         disabled={page === totalPages}

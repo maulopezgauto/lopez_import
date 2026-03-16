@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import Team from './catalogues/temcards.jsx'
-import carnesLanding from './catalogues/catalogoCarnesLanding.jsx'
+import Team from './catalogue/temcards.jsx'
+import carnesLanding from './catalogue/public/catalogoCarnesLanding.jsx'
 import steak from '../assets/img/carnes/steak_black_bg.jpg'
 import blackbg from '../assets/img/backgrounds/blackbg.png'
 import PilarCard from '../components/teamCard.jsx';

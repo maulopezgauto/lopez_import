@@ -1,5 +1,5 @@
-import FilterSection from './Filters/FilterSection.jsx'
-import FilterItem from './Filters/FilterItem.jsx'
+import FilterSection from './Filters/FilterSection.js'
+import FilterItem from './Filters/FilterItem.js'
 
 export default function Sidebar({ filters, setFilters }) {
 

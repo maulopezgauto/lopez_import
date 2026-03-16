@@ -6,11 +6,16 @@ import socialLinks from '../assets/img/logo/index.js'
 
 function Footer() {
 
-  const [isDark, setIsDark] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
-    setIsDark(media.matches);
 
     const listener = e => setIsDark(e.matches);
     media.addEventListener("change", listener);
